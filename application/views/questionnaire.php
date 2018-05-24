@@ -60,16 +60,25 @@
                                     <a href="education"> Информация об образовании</a>
                                 </li>
                                 <li>
-                                    <a href="notifications.html"> Опыт работы</a>
+                                    <a href="contactinfo"> Контактная информация</a>
                                 </li>
                                 <li>
-                                    <a href="typography.html"> Стаж работы</a>
+                                    <a href="drivinglicense"> Водительские права</a>
                                 </li>
                                 <li>
-                                    <a href="icons.html"> Icons</a>
+                                    <a href="military"> Отношение к воинской обязанности</a>
                                 </li>
                                 <li>
-                                    <a href="grid.html">Grid</a>
+                                    <a href="languages"> Знание иностранных языков</a>
+                                </li>
+                                <li>
+                                    <a href="academicdegree"> Учёная степень</a>
+                                </li>
+                                <li>
+                                    <a href="experience"> Стаж работы</a>
+                                </li>
+                                <li>
+                                    <a href="anexperience"> Опыт работы</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -173,7 +182,6 @@
                                         <option value="9">9</option>
                                         <option value="10">10+</option>
                                     </select>
-
                                 </div>
                                 <div class="form-group" id="inner">
 

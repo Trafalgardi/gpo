@@ -60,16 +60,25 @@
                                 <a class="active" href="buttons.html"> Информация об образовании</a>
                             </li>
                             <li>
-                                <a href="notifications.html"> Опыт работы</a>
+                                <a href="contactinfo"> Контактная информация</a>
                             </li>
                             <li>
-                                <a href="typography.html"> Стаж работы</a>
+                                <a href="drivinglicense"> Водительские права</a>
                             </li>
                             <li>
-                                <a href="icons.html"> Icons</a>
+                                <a href="military"> Отношение к воинской обязанности</a>
                             </li>
                             <li>
-                                <a href="grid.html">Grid</a>
+                                <a href="languages"> Знание иностранных языков</a>
+                            </li>
+                            <li>
+                                <a href="academicdegree"> Учёная степень</a>
+                            </li>
+                            <li>
+                                <a href="experience"> Стаж работы</a>
+                            </li>
+                            <li>
+                                <a href="anexperience"> Опыт работы</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -1185,7 +1194,7 @@
                                 </form>
                                 <script type="text/javascript">
 
-                                    $("#button_2").click(function(){
+                                    $("#button_3").click(function(){
                                         var $new_ed_17 = $("#new_ed_17");
                                         var $new_ed_18 = $("#new_ed_18");
                                         var $new_ed_19 = $("#new_ed_19");
@@ -1216,7 +1225,7 @@
                             <div class="panel-body">
                                 <form method="POST">
                                     <label>Период обучения</label>
-                                    <div class="row" id="new_ed_6">
+                                    <div class="row" id="new_ed_21">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1255,7 +1264,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_7" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_22" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1294,7 +1303,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_8" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_23" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1333,7 +1342,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_9" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_24" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1372,7 +1381,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_10" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_25" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1426,20 +1435,20 @@
                                 </form>
                                 <script type="text/javascript">
 
-                                    $("#button_1").click(function(){
-                                        var $new_ed_7 = $("#new_ed_7");
-                                        var $new_ed_8 = $("#new_ed_8");
-                                        var $new_ed_9 = $("#new_ed_9");
-                                        if($new_ed_9.is(':visible')){
-                                            $("#new_ed_10").show();
+                                    $("#button_4").click(function(){
+                                        var $new_ed_22 = $("#new_ed_22");
+                                        var $new_ed_23 = $("#new_ed_23");
+                                        var $new_ed_24 = $("#new_ed_24");
+                                        if($new_ed_24.is(':visible')){
+                                            $("#new_ed_25").show();
                                         }
-                                        if($new_ed_8.is(':visible')){
-                                            $("#new_ed_9").show();
+                                        if($new_ed_23.is(':visible')){
+                                            $("#new_ed_24").show();
                                         }
-                                        if($new_ed_7.is(':visible')){
-                                            $("#new_ed_8").show();
+                                        if($new_ed_22.is(':visible')){
+                                            $("#new_ed_23").show();
                                         }
-                                        $new_ed_7.show();
+                                        $new_ed_22.show();
 
                                         
 
@@ -1457,7 +1466,7 @@
                             <div class="panel-body">
                                 <form method="POST">
                                     <label>Период обучения</label>
-                                    <div class="row" id="new_ed_11">
+                                    <div class="row" id="new_ed_26">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1496,7 +1505,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_12" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_27" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1535,7 +1544,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_13" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_28" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1574,7 +1583,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_14" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_29" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1613,7 +1622,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_15" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_30" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1655,7 +1664,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="button" id="button_2" class="btn btn-primary">Добавить учебное заведение</button>
+                                                <button type="button" id="button_5" class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
                                                 <button type="submit" class="btn btn-outline btn-success">Отправить данные</button>
@@ -1667,20 +1676,20 @@
                                 </form>
                                 <script type="text/javascript">
 
-                                    $("#button_2").click(function(){
-                                        var $new_ed_12 = $("#new_ed_12");
-                                        var $new_ed_13 = $("#new_ed_13");
-                                        var $new_ed_14 = $("#new_ed_14");
-                                        if($new_ed_14.is(':visible')){
-                                            $("#new_ed_15").show();
+                                    $("#button_5").click(function(){
+                                        var $new_ed_27 = $("#new_ed_27");
+                                        var $new_ed_28 = $("#new_ed_28");
+                                        var $new_ed_29 = $("#new_ed_29");
+                                        if($new_ed_29.is(':visible')){
+                                            $("#new_ed_30").show();
                                         }
-                                        if($new_ed_13.is(':visible')){
-                                            $("#new_ed_14").show();
+                                        if($new_ed_28.is(':visible')){
+                                            $("#new_ed_29").show();
                                         }
-                                        if($new_ed_12.is(':visible')){
-                                            $("#new_ed_13").show();
+                                        if($new_ed_27.is(':visible')){
+                                            $("#new_ed_28").show();
                                         }
-                                        $new_ed_12.show();
+                                        $new_ed_27.show();
 
                                         
 
@@ -1698,7 +1707,7 @@
                             <div class="panel-body">
                                 <form method="POST">
                                     <label>Период обучения</label>
-                                    <div class="row" id="new_ed_11">
+                                    <div class="row" id="new_ed_31">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1737,7 +1746,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_12" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_32" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1776,7 +1785,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_13" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_33" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1815,7 +1824,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_14" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_34" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1854,7 +1863,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" id="new_ed_15" style="padding-top: 20px; display: none;">
+                                    <div class="row" id="new_ed_35" style="padding-top: 20px; display: none;">
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
@@ -1896,7 +1905,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="button" id="button_2" class="btn btn-primary">Добавить учебное заведение</button>
+                                                <button type="button" id="button_6" class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
                                                 <button type="submit" class="btn btn-outline btn-success">Отправить данные</button>
@@ -1908,20 +1917,20 @@
                                 </form>
                                 <script type="text/javascript">
 
-                                    $("#button_2").click(function(){
-                                        var $new_ed_12 = $("#new_ed_12");
-                                        var $new_ed_13 = $("#new_ed_13");
-                                        var $new_ed_14 = $("#new_ed_14");
-                                        if($new_ed_14.is(':visible')){
-                                            $("#new_ed_15").show();
+                                    $("#button_6").click(function(){
+                                        var $new_ed_32 = $("#new_ed_32");
+                                        var $new_ed_33 = $("#new_ed_33");
+                                        var $new_ed_34 = $("#new_ed_34");
+                                        if($new_ed_34.is(':visible')){
+                                            $("#new_ed_35").show();
                                         }
-                                        if($new_ed_13.is(':visible')){
-                                            $("#new_ed_14").show();
+                                        if($new_ed_33.is(':visible')){
+                                            $("#new_ed_34").show();
                                         }
-                                        if($new_ed_12.is(':visible')){
-                                            $("#new_ed_13").show();
+                                        if($new_ed_32.is(':visible')){
+                                            $("#new_ed_33").show();
                                         }
-                                        $new_ed_12.show();
+                                        $new_ed_32.show();
 
                                         
 
