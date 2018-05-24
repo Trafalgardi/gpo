@@ -13,6 +13,7 @@
     <link href="<?php echo base_url();?>assets/css/metisMenu.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/sb-admin-2.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/morris.css" rel="stylesheet">
+    
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
 

@@ -16,6 +16,8 @@ class Auth_models extends CI_Model
 
 		$fio = $_POST['fio_1'] . " " . $_POST['fio_2'] . " " . $_POST['fio_3'];
 
+		
+
 		$data = array(
 
 					'username' => $_POST['username'],
@@ -23,7 +25,7 @@ class Auth_models extends CI_Model
 					'phone ' => $_POST['phone'],
 					'fio' => $fio,
 					'dateofbirth' => $_POST['dateofbirth'],
-					'password' => password_hash($_POST['password'], PASSWORD_ARGON2I),
+					'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 					'joindate' => date('Y-m-d')
 
 				);

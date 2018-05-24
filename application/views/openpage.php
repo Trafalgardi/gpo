@@ -21,11 +21,14 @@
         </nav>
       </div>
 
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+      <div class="row jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
           <h1 class="display-4" style="text-align: center;">Добро пожаловать!</h1>
           <p class="lably my-3">Преветствую вас на сайте, который был разработан студентами <a class="alert-link" href="https://tusur.ru/">ТУСУРа</a> в рамках группового проектного обучения. Этот web-ресурс предназначен для тестирования пользователей на уровень благонадежности в рамках кадровой безопасности предприятия.</p>
           
+        </div>
+        <div class="col-md-6 px-0">
+            <img src="/assets/tusur.png" width="500" height="132" style="margin-top: 25px;margin-left: 20px;">
         </div>
       </div>
 

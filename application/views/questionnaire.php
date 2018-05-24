@@ -63,7 +63,7 @@
                                     <a href="contactinfo"> Контактная информация</a>
                                 </li>
                                 <li>
-                                    <a href="drivinglicense"> Водительские права</a>
+                                    <a href="drivinglicense"> Водительское удостоверения</a>
                                 </li>
                                 <li>
                                     <a href="military"> Отношение к воинской обязанности</a>
