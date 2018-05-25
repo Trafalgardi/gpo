@@ -143,4 +143,80 @@ class User extends CI_Controller
 		$this->load->view($page);
 		$this->load->view('templates/footer_for_user');
 	}
+	public function military($page = 'military'){
+
+		$this->load->database();
+		$this->load->library('Session/session');
+		$this->load->helper('form');
+    	$this->load->library('form_validation');
+    	$this->db->close();
+		$this->db->initialize();
+
+		if ( ! file_exists(APPPATH.'/views/'.$page.'.php'))
+			{
+					// Упс, у нас нет такой страницы!
+					show_404();
+			}
+
+		$this->load->view('templates/header_for_user');
+		$this->load->view($page);
+		$this->load->view('templates/footer_for_user');
+	}
+	public function languages($page = 'languages'){
+
+		$this->load->database();
+		$this->load->library('Session/session');
+		$this->load->helper('form');
+    	$this->load->library('form_validation');
+    	$this->db->close();
+		$this->db->initialize();
+
+		if ( ! file_exists(APPPATH.'/views/'.$page.'.php'))
+			{
+					// Упс, у нас нет такой страницы!
+					show_404();
+			}
+
+		$this->load->view('templates/header_for_user');
+		$this->load->view($page);
+		$this->load->view('templates/footer_for_user');
+	}
+	public function experience($page = 'experience'){
+
+		$this->load->database();
+		$this->load->library('Session/session');
+		$this->load->helper('form');
+    	$this->load->library('form_validation');
+    	$this->db->close();
+		$this->db->initialize();
+
+		if ( ! file_exists(APPPATH.'/views/'.$page.'.php'))
+			{
+					// Упс, у нас нет такой страницы!
+					show_404();
+			}
+
+		$this->load->view('templates/header_for_user');
+		$this->load->view($page);
+		$this->load->view('templates/footer_for_user');
+	}
+	public function anexperience($page = 'anexperience'){
+
+		$this->load->database();
+		$this->load->library('Session/session');
+		$this->load->helper('form');
+    	$this->load->library('form_validation');
+    	$this->db->close();
+		$this->db->initialize();
+
+		if ( ! file_exists(APPPATH.'/views/'.$page.'.php'))
+			{
+					// Упс, у нас нет такой страницы!
+					show_404();
+			}
+
+		$this->load->view('templates/header_for_user');
+		$this->load->view($page);
+		$this->load->view('templates/footer_for_user');
+	}
 }
