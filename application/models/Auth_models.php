@@ -57,6 +57,7 @@ class Auth_models extends CI_Model
 				{
 					$fio = $row->fio;
 			    	$_SESSION['user_fio'] = $fio;
+			    	$_SESSION['username'] = $username;
 				}
 			    
 				redirect("user/profile", "refresh");

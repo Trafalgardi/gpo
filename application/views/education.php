@@ -108,6 +108,11 @@
                         Уровень образования 
                     </div>
                     <div class="panel-body">
+                        <?php if(isset($_SESSION['success'])) {?>
+
+                        <div class="alert alert-success"><?php echo $_SESSION['success']?> </div>
+
+                        <?php }?>
                         <form method="POST">
                             <div class="form-group">
                                 <label class="checkbox-inline"><input id="checkbox_1" name="checkbox_1" type="checkbox" value="Без образования">Без образования</label>

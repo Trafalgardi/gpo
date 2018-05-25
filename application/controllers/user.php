@@ -9,6 +9,7 @@ class User extends CI_Controller
 
         	$this->load->database();
 			$this->load->library('Session/session');
+			$this->load->model('user_models');
 
                 if(!isset($_SESSION['user_logged'])){
 
@@ -79,6 +80,16 @@ class User extends CI_Controller
 					// Упс, у нас нет такой страницы!
 					show_404();
 			}
+		if ($this->input->post('education') !== false){
+
+			if($this->form_validation->run() == True){
+
+				$this->user_models->insertexperience();
+				$this->session->set_flashdata("success", "Данные успешно загруженны!");
+				redirect("user/experience", "refresh");
+			}
+			
+		}
 
 		$this->load->view('templates/header_for_user');
 		$this->load->view($page);
@@ -195,6 +206,19 @@ class User extends CI_Controller
 					// Упс, у нас нет такой страницы!
 					show_404();
 			}
+
+			$this->form_validation->set_rules('experience_0', 'Общий стаж', 'required');
+
+		if ($this->input->post('experience') !== false){
+
+			if($this->form_validation->run() == True){
+
+				$this->user_models->insertexperience();
+				$this->session->set_flashdata("success", "Данные успешно загруженны!");
+				redirect("user/experience", "refresh");
+			}
+			
+		}
 
 		$this->load->view('templates/header_for_user');
 		$this->load->view($page);

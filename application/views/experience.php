@@ -108,10 +108,15 @@
                         Стаж работы 
                     </div>
                     <div class="panel-body">
-                        <form method="POST">
-                            <div class="form-group">
+                        <?php if(isset($_SESSION['success'])) {?>
+
+                        <div class="alert alert-success"><?php echo $_SESSION['success']?> </div>
+
+                        <?php }?>
+                        <form id="experience-form"  action="" method="POST" role="form">
+                            <div class="form-group control">
                                 <label>Общий стаж</label>
-                                <select class="form-control" name="experience" id="experience">
+                                <select class="form-control" name="experience_0" id="experience_0">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -125,7 +130,7 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group control">
                                 <label>По специальности</label>
                                 <select class="form-control" name="experience_1" id="experience_1">
                                     <option value="0" selected="selected">0</option>
@@ -141,8 +146,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Сколько раз вы меняли фамилию?</label>
+                            <div class="form-group control">
+                                <label>Управленческий стаж</label>
                                 <select class="form-control" name="experience_2" id="experience_2">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
@@ -157,8 +162,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Управленческий стаж</label>
+                            <div class="form-group control">
+                                <label>Педагогический стаж</label>
                                 <select class="form-control" name="experience_3" id="experience_3">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
@@ -173,8 +178,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Педагогический стаж</label>
+                            <div class="form-group control">
+                                <label>Управление проектами</label>
                                 <select class="form-control" name="experience_4" id="experience_4">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
@@ -189,8 +194,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Управление проектами</label>
+                            <div class="form-group control">
+                                <label>Не по специальности</label>
                                 <select class="form-control" name="experience_5" id="experience_5">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
@@ -205,8 +210,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Не по специальности</label>
+                            <div class="form-group control">
+                                <label>Рабочие специальности</label>
                                 <select class="form-control" name="experience_6" id="experience_6">
                                     <option value="0" selected="selected">0</option>
                                     <option value="1">1</option>
@@ -221,21 +226,8 @@
                                     <option value="10">Более 10</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Рабочие специальности</label>
-                                <select class="form-control" name="experience_7" id="experience_7">
-                                    <option value="0" selected="selected">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">Более 10</option>
-                                </select>
+                            <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
+                                <input type="submit" id="experience-submit" name="experience-submit" class="btn btn-outline btn-success"></input>
                             </div>
                         </form>
                     </div>
