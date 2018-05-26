@@ -38,7 +38,7 @@
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
                         <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
+                            <input name="education_1_8" type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
                                 <i class="fa fa-search"></i>
@@ -57,7 +57,7 @@
                                 <a href="questionnaire"> Базовая информация</a>
                             </li>
                             <li>
-                                <a class="active" href="buttons.html"> Информация об образовании</a>
+                                <a class="active" href="education"> Информация об образовании</a>
                             </li>
                             <li>
                                 <a href="contactinfo"> Контактная информация</a>
@@ -113,29 +113,31 @@
                         <div class="alert alert-success"><?php echo $_SESSION['success']?> </div>
 
                         <?php }?>
+                        <?php echo validation_errors('<div class="alert alert-danger">', '</div>');?>
                         <form method="POST">
                             <div class="form-group">
-                                <label class="checkbox-inline"><input id="checkbox_1" name="checkbox_1" type="checkbox" value="Без образования">Без образования</label>
+                                <label class="checkbox-inline"><input id="checkbox_1" name="checkbox_1" type="checkbox" value="Без образования" >Без образования</label>
+                                
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-inline"><input id="checkbox_2" name="checkbox_2" type="checkbox" value="Полное среднее образование">Полное среднее образование</label>
                                 <div id="checkbox_at_2">
                                     <label> Средний балл</label>
-                                    <input class="form-control" type="text" name="polnoesrednie">
+                                    <input class="form-control" type="text" id="check_2" name="check_2">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-inline"><input id="checkbox_3" name="checkbox_3" type="checkbox" value="Магистратура">Магистратура</label>
                                 <div id="checkbox_at_3">
                                     <label> Средний балл</label>
-                                    <input class="form-control" type="text" name="polnoesrednie">
+                                    <input class="form-control" type="text" id="check_3" name="check_3">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-inline"><input id="checkbox_4" name="checkbox_4" type="checkbox" value="Специалитет">Специалитет</label>
                                 <div id="checkbox_at_4">
                                     <label> Средний балл</label>
-                                    <input class="form-control" type="text" name="polnoesrednie">
+                                    <input class="form-control" type="text" id="check_4" name="check_4">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -151,14 +153,14 @@
                                 <label class="checkbox-inline"><input id="checkbox_8" name="checkbox_8" type="checkbox" value="Профессиональная переподготовка">Профессиональная переподготовка</label>
                                 <div id="checkbox_at_8">
                                     <label> Средний балл</label>
-                                    <input class="form-control" type="text" name="polnoesrednie">
+                                    <input class="form-control" type="text" id="check_8" name="check_8">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-inline"><input id="checkbox_9" name="checkbox_9" type="checkbox" value="Профессиональная переподготовка в области управления">Профессиональная переподготовка в области управления</label>
                                 <div id="checkbox_at_9">
                                     <label> Средний балл</label>
-                                    <input class="form-control" type="text" name="polnoesrednie">
+                                    <input class="form-control" type="text" id="check_9" name="check_9">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -227,37 +229,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Факультет</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_4" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_5" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_6" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -266,37 +268,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_7" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_9" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Факультет</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_10" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_11" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_12" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -305,37 +307,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_13" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_14" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_15" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Факультет</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_16" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_17" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_18" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -344,37 +346,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_19" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_20" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_21" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Факультет</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_22" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_23" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_24" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -383,37 +385,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_25" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_26" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_27" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Факультет</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_28" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_29" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_30" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -424,7 +426,7 @@
                                                 <button type="button" class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="submit" id="submit_2" name="submit_2" class="btn btn-outline btn-success">Отправить данные</button>
+                                                <input type="submit" id="submit_2" name="submit_2" class="btn btn-outline btn-success"></input>
                                             </div>
                                         </div>
 
@@ -468,37 +470,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_1" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_2" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_3" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_4" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_5" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_6" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -507,37 +509,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_7" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_9" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_10" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_11" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_12" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -546,37 +548,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_13" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_14" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_15" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_16" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_17" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_18" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -585,37 +587,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_19" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_20" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_21" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_22" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_23" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_24" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -624,37 +626,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_25" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_26" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_27" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_28" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_29" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_30" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -665,7 +667,7 @@
                                                 <button type="button" id="button_1" class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="submit" id="submit_3" name="submit_3" class="btn btn-outline btn-success">Отправить данные</button>
+                                                <input type="submit" id="submit_3" name="submit_3" class="btn btn-outline btn-success"></input>
                                             </div>
                                         </div>
 
@@ -709,43 +711,43 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_2_1" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2_2" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_3" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_4" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_5" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_6" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_7" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -754,43 +756,43 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_2_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2_9" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_10" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_11" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_12" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_13" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_14" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -799,43 +801,43 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_2_15" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2_16" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_17" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_18" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_19" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_20" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_21" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -844,43 +846,43 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_2_22" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2_23" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_24" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_25" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_26" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_27" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_28" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -889,43 +891,43 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_2_29" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_2_30" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_31" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Наименование программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_32" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Специальность</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_33" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_34" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_2_35" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -936,7 +938,7 @@
                                                 <button type="button" id="button_2" class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="submit_" class="btn btn-outline btn-success">Отправить данные</button>
+                                                <input type="submit" id="submit_4" name="submit_4" class="btn btn-outline btn-success">Отправить данные</input>
                                             </div>
                                         </div>
 
@@ -993,37 +995,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_3_1" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_3_2" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_3" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_4" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_5" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_6" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1032,37 +1034,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_3_7" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_3_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_9" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_10" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_11" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Квалификация</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_12" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1071,37 +1073,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_3_13" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_3_14" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_15" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_16" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_17" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_18" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1110,37 +1112,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_3_19" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_3_20" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_21" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_22" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_21" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_22" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1149,37 +1151,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_3_23" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_3_24" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_25" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_26" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_27" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_3_28" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1190,7 +1192,7 @@
                                                 <button type="button" id="button_3"  class="btn btn-primary">Добавить учебное заведение</button>
                                             </div>
                                             <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                                <button type="submit" id="submit_4" name="submit_4" class="btn btn-outline btn-success">Отправить данные</button>
+                                                <input type="submit" id="submit_5" name="submit_5" class="btn btn-outline btn-success"></input>
                                             </div>
                                         </div>
 
@@ -1234,37 +1236,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1273,37 +1275,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1312,37 +1314,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1351,37 +1353,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1390,37 +1392,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения (город)</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1475,37 +1477,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1514,37 +1516,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1553,37 +1555,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1592,37 +1594,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1631,37 +1633,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1716,37 +1718,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1755,37 +1757,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1794,37 +1796,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1833,37 +1835,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -1872,37 +1874,37 @@
                                         <div class="col-xs-2" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Дата начала</p>
-                                                <input type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                                                <input name="education_1_8" type="date" class="form-control" style="border-top-right-radius: 0;border-bottom-right-radius: 0; border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
                                             </div>
                                         </div>
                                         <div class="col-xs-2">
                                             <div class="input-group">
                                                 <p>Дата окончания</p>
-                                                <input type="date" class="form-control">
+                                                <input name="education_1_8" type="date" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-3" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Место учебного заведения</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: auto;">
                                             <div class="input-group">
                                                 <p>Название программы</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xs-1" style="width: 10%;">
                                             <div class="input-group">
                                                 <p>Кол-во часов</p>
-                                                <input type="text" class="form-control">
+                                                <input name="education_1_8" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>

@@ -208,6 +208,14 @@
                             }); 
                             </script>
 
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-4">
+                                        <input type="submit" id="contactinfo_submit" name="contactinfo_submit" class="btn btn-outline btn-success" value="Отправить данные">
+                                    </div>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                     <div class="panel-footer">
@@ -225,137 +233,39 @@
                     <div class="panel-body">
                         <form method="POST">
                             <div class="row" id="new_fio_1">
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>ФИО</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Организация</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Должность</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Контакты</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+
+                                <div class="col-md-12">
+                                    <p>ФИО,      организация,         должность,       контакты</p>
+                                    <input name="recom_1" type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="row" id="new_fio_2" style="padding-top: 20px; display: none;">
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>ФИО</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Организация</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Должность</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Контакты</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+                                <div class="col-md-12">
+                                        
+                                        <input name="recom_2" type="text" class="form-control" placeholder="ФИО организация должность контакты">
+
                                 </div>
                             </div>
 
                             <div class="row" id="new_fio_3" style="padding-top: 20px; display: none;">
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>ФИО</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Организация</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Должность</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Контакты</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+                                <div class="col-md-12">
+                                        
+                                        <input name="recom_3" type="text" class="form-control" placeholder="ФИО организация должность контакты">
                                 </div>
                             </div>
 
                             <div class="row" id="new_fio_4" style="padding-top: 20px; display: none;">
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>ФИО</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Организация</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Должность</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Контакты</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+                                <div class="col-md-12">
+                                        
+                                        <input name="recom_4" type="text" class="form-control" placeholder="ФИО организация должность контакты">
                                 </div>
                             </div>
 
                             <div class="row" id="new_fio_5" style="padding-top: 20px; display: none;">
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>ФИО</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Организация</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Должность</p>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-xs-3" style="width: auto;">
-                                    <div class="input-group">
-                                        <p>Контакты</p>
-                                        <input type="text" class="form-control">
-                                    </div>
+                                <div class="col-md-12">
+                                        
+                                        <input name="recom_5" type="text" class="form-control" placeholder="ФИО организация должность контакты">
                                 </div>
                             </div>
                         
@@ -365,7 +275,7 @@
                                         <button type="button" class="btn btn-primary">Добавить</button>
                                     </div>
                                     <div class="col-xs-3 col-xs-offset-3" style="padding-top: 15px; margin-left: 0">
-                                        <button type="submit" id="submit_2" name="submit_2" class="btn btn-outline btn-success">Отправить данные</button>
+                                        <input type="submit" id="submit" name="submit" class="btn btn-outline btn-success"></input>
                                     </div>
                                 </div>
 

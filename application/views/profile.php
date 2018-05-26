@@ -77,7 +77,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Доступные тесты</a>
+                            <a href="../test/test_1"><i class="fa fa-edit fa-fw"></i> Доступные тесты</a>
                         </li>
                     </ul>
                 </div>

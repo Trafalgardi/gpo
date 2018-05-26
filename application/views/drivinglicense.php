@@ -102,7 +102,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         Водительское удостоверения
@@ -167,7 +167,7 @@
                             </div>
                             <div class="form-group" id="drivinglicense_2" style="display: none;">
                                 <label>Водительский стаж (лет)</label>
-                                <select class="form-control" id="driving">
+                                <select class="form-control" name="driving">
                                     <option value="0,1-1 (менее года)" selected="selected">0,1-1 (менее года)</option>
                                     <option value="1-2">1-2</option>
                                     <option value="2-4">2-4</option>
@@ -176,22 +176,7 @@
                                     <option value="более 11 лет">более 11 лет</option>
                                 </select>
                             </div>
-                        </form>
-                    </div>
-                    <div class="panel-footer">
-                        После заполнения станет недоступно
-                    </div>
-                </div>
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-6" id="drivinglicense_3" style="display: none;">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        Водительское удостоверения
-                    </div>
-                    <div class="panel-body">
-                        <form method="POST">
-                            <div class="form-group">
+                            <div class="form-group" id="car_show" style="display: none;">
                                 <label>Наличие транспортного средства</label>
                                 <select class="form-control" name="car" id="car">
                                     <option value="Нет" selected="selected">Нет</option>
@@ -202,25 +187,18 @@
                             <div class="form-group" id="car_inner" style="display: none;">
                                 <label>Категория</label>
                                 <div class="form-group">
-                                    <label class="checkbox-inline">
-                                        <input id="car_1" name="car_1" type="checkbox" value="легковой автомобиль">легковой автомобиль
-                                    </label>
+                                 <select class="form-control" name="car_info">
+                                    <option value="легковой автомобиль" selected="selected">легковой автомобиль</option>
+                                    <option value="А1 – легкие мопеды (объем двигателя до 125 кубических сантиметров)">А1 – легкие мопеды (объем двигателя до 125 кубических сантиметров)</option>
+                                    <option value="общественный автомобильный транспорт">общественный автомобильный транспорт</option>
+                                    <option value="другое">другое</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input type="submit" name="submit" id="submit" class="btn btn-outline btn-success" value="Отправить">
                                 </div>
-                                <div class="form-group">
-                                    <label class="checkbox-inline">
-                                        <input id="car_2" name="car_2" type="checkbox" value="грузовой автомобиль">А1 – легкие мопеды (объем двигателя до 125 кубических сантиметров)
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="checkbox-inline">
-                                        <input id="car_3" name="car_3" type="checkbox" value="общественный автомобильный транс-порт">общественный автомобильный транс-порт
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="checkbox-inline">
-                                        <input id="car_4" name="car_4" type="checkbox" value="другое">другое
-                                    </label>
-                                </div>   
                             </div>
                         </form>
                     </div>
@@ -229,6 +207,8 @@
                     </div>
                 </div>
             </div>
+            <!-- /.col-lg-4 -->
+            
         </div>
         <!-- /.row -->
         
@@ -254,10 +234,12 @@ $(function() {
         $("#drivinglicense_1").show()
         $("#drivinglicense_2").show()
         $("#drivinglicense_3").show()
+        $("#car_show").show()
       }else if(this.value == "Нет"){
         $("#drivinglicense_1").hide()
         $("#drivinglicense_2").hide()
         $("#drivinglicense_3").hide()
+        $("#car_show").hide()
       }
     })
 });

@@ -97,6 +97,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header"> Базовая информация</h1>
+                    <?php if(isset($_SESSION['success'])) {?>
+
+                    <div class="alert alert-success"><?php echo $_SESSION['success']?> </div>
+
+                    <?php }?>
+                    <?php echo validation_errors('<div class="alert alert-danger">', '</div>');?>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -111,11 +117,11 @@
                             <form method="POST">
                                 <div class="form-group">
                                     <label>На должность</label>
-                                    <input class="form-control" type="text" name="nadoljnost">
+                                    <input class="form-control" type="text" name="nadoljnost" id="nadoljnost">
                                 </div>
                                 <div class="form-group">
                                     <label>В отдел</label>
-                                    <input class="form-control" type="text" name="votdel">
+                                    <input class="form-control" type="text" name="votdel" id="votdel">
                                 </div>
                                 <div class="form-group">
                                     <label>Паспортные данные</label>
@@ -143,7 +149,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Дети</label>
-                                    <input class="form-control" type="text" name="deti" placeholder="Да">
+                                    <input class="form-control" type="text" name="deti" value="-:0;" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
@@ -169,7 +175,7 @@
                             <form method="POST">
                                 <div class="form-group">
                                     <label>Сколько раз вы меняли фамилию?</label>
-                                    <select class="form-control" name="fio" id="fio">
+                                    <select class="form-control" name="fioF_1" id="fioF_1">
                                         <option value="0" selected="selected">Не менял(а)</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -189,12 +195,21 @@
                                 <script>
                                     $(document).ready(function(){
 
-                                       $("#fio").change(function(){
+                                       $("#fioF_1").change(function(){
 
-                                        var id = $( "select#fio option:checked" ).val();
+                                        var id = $( "select#fioF_1 option:checked" ).val();
                                         if(id != 0 && $('#inner').empty()){
+                                        content = "";
+                                        content +='<label>По какой причине?</label>';
+                                        content +='<select class="form-control" name="fio_1" id="fio_1">';
+                                        content +='<option value="в целях безопасности" selected="selected">в целях безопасности</option>';
+                                        content +='<option value="в связи с вступлением в брак">в связи с вступлением в брак</option>';
+                                        content +='<option value="усыновлен/удочерена">усыновлен/удочерена</option>';
+                                        content +='<option value="по собственному желанию">по собственному желанию</option>';
+                                        content +='<option value="иные причины">иные причины</option>';
+                                        content += '</select>';
 
-                                        $('#inner').append('<label>По какой причине?</label><select class="form-control" name="fio" id="fio"><option value="в целях безопасности" selected="selected">в целях безопасности</option><option value="в связи с вступлением в брак">в связи с вступлением в брак</option><option value="усыновлен/удочерена">усыновлен/удочерена</option><option value="по собственному желанию">по собственному желанию</option><option value="иные причины">иные причины</option></select>');
+                                        $('#inner').append(content);
                                         }
                                         else{
                                             $('#inner').empty();
@@ -206,7 +221,7 @@
 
                                     <div class="form-group">
                                     <label>Сколько раз вы меняли имя?</label>
-                                    <select class="form-control" name="fioI" id="fioI">
+                                    <select class="form-control" name="fioF_2" id="fioF_2">
                                         <option value="0" selected="selected">Не менял(а)</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -227,12 +242,21 @@
                                 <script>
                                     $(document).ready(function(){
   
-                                       $("#fioI").change(function(){
+                                       $("#fioF_2").change(function(){
 
-                                        var id = $( "select#fioI option:checked" ).val();
+                                        var id = $( "select#fioF_2 option:checked" ).val();
                                         if(id != 0 && $('#innerI').empty()){
+                                        content = "";
+                                        content +='<label>По какой причине?</label>';
+                                        content +='<select class="form-control" name="fio_2" id="fio_2">';
+                                        content +='<option value="в целях безопасности" selected="selected">в целях безопасности</option>';
+                                        content +='<option value="в связи с вступлением в брак">в связи с вступлением в брак</option>';
+                                        content +='<option value="усыновлен/удочерена">усыновлен/удочерена</option>';
+                                        content +='<option value="по собственному желанию">по собственному желанию</option>';
+                                        content +='<option value="иные причины">иные причины</option>';
+                                        content += '</select>';
 
-                                        $('#innerI').append('<label>По какой причине?</label><select class="form-control" name="fioIP" id="fioIP"><option value="в целях безопасности" selected="selected">в целях безопасности</option><option value="усыновлен/удочерена">усыновлен/удочерена</option><option value="по собственному желанию">по собственному желанию</option><option value="иные причины">иные причины</option></select>');
+                                        $('#innerI').append(content);
                                         }
                                         else{
                                             $('#innerI').empty();
@@ -244,7 +268,7 @@
 
                                     <div class="form-group">
                                     <label>Сколько раз вы меняли отчество?</label>
-                                    <select class="form-control" name="fioF" id="fioO">
+                                    <select class="form-control" name="fioF_3" id="fioF_3">
                                         <option value="0" selected="selected">Не менял(а)</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -265,12 +289,21 @@
                                 <script>
                                     $(document).ready(function(){
   
-                                       $("#fioO").change(function(){
+                                       $("#fioF_3").change(function(){
 
-                                        var id = $( "select#fioO option:checked" ).val();
+                                        var id = $( "select#fioF_3 option:checked" ).val();
                                         if(id != 0 && $('#innerO').empty()){
+                                        content = "";
+                                        content +='<label>По какой причине?</label>';
+                                        content +='<select class="form-control" name="fio_3" id="fio_3">';
+                                        content +='<option value="в целях безопасности" selected="selected">в целях безопасности</option>';
+                                        content +='<option value="в связи с вступлением в брак">в связи с вступлением в брак</option>';
+                                        content +='<option value="усыновлен/удочерена">усыновлен/удочерена</option>';
+                                        content +='<option value="по собственному желанию">по собственному желанию</option>';
+                                        content +='<option value="иные причины">иные причины</option>';
+                                        content += '</select>';
 
-                                        $('#innerO').append('<label>По какой причине?</label><select class="form-control" name="fioOP" id="fioOP"><option value="в целях безопасности" selected="selected">в целях безопасности</option><option value="усыновлен/удочерена">усыновлен/удочерена</option><option value="по собственному желанию">по собственному желанию</option><option value="иные причины">иные причины</option></select>');
+                                        $('#innerO').append(content);
                                         }
                                         else{
                                             $('#innerO').empty();
@@ -282,7 +315,7 @@
 
                                     <div class="form-group">
                                     <label>Сколько раз вы меняли дату рождения?</label>
-                                    <select class="form-control" name="data_birth" id="data_birth">
+                                    <select class="form-control" name="fioF_4" id="fioF_4">
                                         <option value="0" selected="selected">Не менял(а)</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -297,21 +330,31 @@
                                     </select>
 
                                 </div>
-                                <div class="form-group" id="inner_data_birth">
+                                <div class="form-group" id="inner_fioF_4">
 
                                 </div>
                                 <script>
                                     $(document).ready(function(){
   
-                                       $("#data_birth").change(function(){
+                                       $("#fioF_4").change(function(){
 
-                                        var id = $( "select#data_birth option:checked" ).val();
-                                        if(id != 0 && $('#inner_data_birth').empty()){
+                                        var id = $( "select#fioF_4 option:checked" ).val();
+                                        if(id != 0 && $('#inner_fioF_4').empty()){
 
-                                        $('#inner_data_birth').append('<label>По какой причине?</label><select class="form-control" name="data_birth_P" id="data_birth_P"><option value="в целях безопасности" selected="selected">в целях безопасности</option><option value="усыновлен/удочерена">усыновлен/удочерена</option><option value="по собственному желанию">по собственному желанию</option><option value="иные причины">иные причины</option></select>');
+                                        content = "";
+                                        content +='<label>По какой причине?</label>';
+                                        content +='<select class="form-control" name="fio_4" id="fio_4">';
+                                        content +='<option value="в целях безопасности" selected="selected">в целях безопасности</option>';
+                                        content +='<option value="в связи с вступлением в брак">в связи с вступлением в брак</option>';
+                                        content +='<option value="усыновлен/удочерена">усыновлен/удочерена</option>';
+                                        content +='<option value="по собственному желанию">по собственному желанию</option>';
+                                        content +='<option value="иные причины">иные причины</option>';
+                                        content += '</select>';
+
+                                        $('#inner_fioF_4').append(content);
                                         }
                                         else{
-                                            $('#inner_data_birth').empty();
+                                            $('#inner_fioF_4').empty();
                                         }
                                        });
 
